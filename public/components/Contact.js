@@ -35,7 +35,4 @@ var Contact = React.createClass({
   }
 });
 
-ReactDOM.render(
-  < Contact />,
-  document.getElementById('app')
-);
+module.exports = Contact;
