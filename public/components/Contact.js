@@ -1,5 +1,4 @@
 var React = require('react');
-var ReactDOM = require('react-dom');
 
 var Contact = React.createClass({
 	getInitialState: function () {
@@ -19,9 +18,10 @@ var Contact = React.createClass({
   },
 
   render: function () {
+    var response = this.state.authorized ? 'Contact': 'Enter the Password';
     return (
       <div id="authorization">
-        <h1>Contact</h1>
+        <h1>{response}</h1>
         <ul>
           <li>
             client@example.com

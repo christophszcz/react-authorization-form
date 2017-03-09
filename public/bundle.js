@@ -19753,7 +19753,6 @@
 	'use strict';
 
 	var React = __webpack_require__(1);
-	var ReactDOM = __webpack_require__(158);
 
 	var Contact = React.createClass({
 	  displayName: 'Contact',
@@ -19774,13 +19773,14 @@
 	  },
 
 	  render: function render() {
+	    var response = this.state.authorized ? 'Contact' : 'Enter the Password';
 	    return React.createElement(
 	      'div',
 	      { id: 'authorization' },
 	      React.createElement(
 	        'h1',
 	        null,
-	        'Contact'
+	        response
 	      ),
 	      React.createElement(
 	        'ul',
