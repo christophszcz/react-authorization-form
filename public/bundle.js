@@ -19776,7 +19776,7 @@
 	    var title = this.state.authorized ? 'Contact' : 'Enter the Password';
 	    var login = React.createElement(
 	      'form',
-	      { action: '#' },
+	      { action: '#', onSubmit: this.authorize },
 	      React.createElement('input', { type: 'password', placeholder: 'Password' }),
 	      React.createElement('input', { type: 'submit' })
 	    );
@@ -19787,12 +19787,12 @@
 	      React.createElement(
 	        'li',
 	        null,
-	        'client@example.com'
+	        'John.Doe@fakeemail.com'
 	      ),
 	      React.createElement(
 	        'li',
 	        null,
-	        '555.555.5555'
+	        '(555) 555 - 5555'
 	      )
 	    );
 

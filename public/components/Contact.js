@@ -20,7 +20,7 @@ var Contact = React.createClass({
   render: function () {
     var title = this.state.authorized ? 'Contact': 'Enter the Password';
     var login = (
-      <form action="#">
+      <form action="#" onSubmit={this.authorize}>
         <input type="password" placeholder="Password" />
         <input type="submit" />
       </form>
@@ -29,10 +29,10 @@ var Contact = React.createClass({
     var contactInfo = (
       <ul>
         <li>
-          client@example.com
+          John.Doe@fakeemail.com
         </li>
         <li>
-          555.555.5555
+          (555) 555 - 5555
         </li>
       </ul>
     );
