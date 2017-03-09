@@ -29,7 +29,7 @@ var Contact = React.createClass({
     var contactInfo = (
       <ul>
         <li>
-          John.Doe@fakeemail.com
+          john.doe@fakeemail.com
         </li>
         <li>
           (555) 555 - 5555
