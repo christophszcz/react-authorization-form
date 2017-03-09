@@ -19773,29 +19773,38 @@
 	  },
 
 	  render: function render() {
-	    var response = this.state.authorized ? 'Contact' : 'Enter the Password';
+	    var title = this.state.authorized ? 'Contact' : 'Enter the Password';
+	    var login = React.createElement(
+	      'form',
+	      { action: '#' },
+	      React.createElement('input', { type: 'password', placeholder: 'Password' }),
+	      React.createElement('input', { type: 'submit' })
+	    );
+
+	    var contactInfo = React.createElement(
+	      'ul',
+	      null,
+	      React.createElement(
+	        'li',
+	        null,
+	        'client@example.com'
+	      ),
+	      React.createElement(
+	        'li',
+	        null,
+	        '555.555.5555'
+	      )
+	    );
+
 	    return React.createElement(
 	      'div',
 	      { id: 'authorization' },
 	      React.createElement(
 	        'h1',
 	        null,
-	        response
+	        title
 	      ),
-	      React.createElement(
-	        'ul',
-	        null,
-	        React.createElement(
-	          'li',
-	          null,
-	          'client@example.com'
-	        ),
-	        React.createElement(
-	          'li',
-	          null,
-	          '555.555.5555'
-	        )
-	      )
+	      this.state.authorized ? contactInfo : login
 	    );
 	  }
 	});

@@ -18,18 +18,29 @@ var Contact = React.createClass({
   },
 
   render: function () {
-    var response = this.state.authorized ? 'Contact': 'Enter the Password';
+    var title = this.state.authorized ? 'Contact': 'Enter the Password';
+    var login = (
+      <form action="#">
+        <input type="password" placeholder="Password" />
+        <input type="submit" />
+      </form>
+      );
+
+    var contactInfo = (
+      <ul>
+        <li>
+          client@example.com
+        </li>
+        <li>
+          555.555.5555
+        </li>
+      </ul>
+    );
+
     return (
       <div id="authorization">
-        <h1>{response}</h1>
-        <ul>
-          <li>
-            client@example.com
-          </li>
-          <li>
-            555.555.5555
-          </li>
-        </ul>
+        <h1>{title}</h1>
+        {this.state.authorized ? contactInfo : login }
       </div>
     );
   }
