@@ -19759,7 +19759,7 @@
 
 	  getInitialState: function getInitialState() {
 	    return {
-	      password: 'swordfish',
+	      password: 'password',
 	      authorized: false
 	    };
 	  },
@@ -19773,7 +19773,7 @@
 	  },
 
 	  render: function render() {
-	    var title = this.state.authorized ? 'Contact' : 'Enter the Password';
+	    var title = this.state.authorized ? 'Contact Information' : 'Enter the Password';
 	    var login = React.createElement(
 	      'form',
 	      { action: '#', onSubmit: this.authorize },
@@ -19787,12 +19787,20 @@
 	      React.createElement(
 	        'li',
 	        null,
-	        'John.Doe@fakeemail.com'
+	        React.createElement(
+	          'a',
+	          { href: 'mailto:john.doe@fakeemail.com' },
+	          'john.doe@fakeemail.com'
+	        )
 	      ),
 	      React.createElement(
 	        'li',
 	        null,
-	        '(555) 555 - 5555'
+	        React.createElement(
+	          'a',
+	          { href: 'tel:+15555555555' },
+	          '(555) 555 - 5555'
+	        )
 	      )
 	    );
 
